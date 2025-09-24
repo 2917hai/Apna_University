@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .pass {
+      background: #d4edda;
+      color: #155724;
+    }
+    .fail {
+      background: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Online Test (100 Marks)</h2>
+
+    <!-- Questions -->
+    <form id="quizForm" action="index.html">
+      <div class="question">
+        <p><strong>1. Physics:</strong> Speed = Distance / ?</p>
+        <input type="radio" name="q1" value="Time"> Time <br>
+        <input type="radio" name="q1" value="Force"> Force <br>
+        <input type="radio" name="q1" value="Mass"> Mass
+      </div>
+
+      <div class="question">
+        <p><strong>2. Chemistry:</strong> H<sub>2</sub>O is the chemical formula of?</p>
+        <input type="radio" name="q2" value="Water"> Water <br>
+        <input type="radio" name="q2" value="Oxygen"> Oxygen <br>
+        <input type="radio" name="q2" value="Hydrogen"> Hydrogen
+      </div>
+
+      <div class="question">
+        <p><strong>3. Mathematics:</strong> 5 × 6 = ?</p>
+        <input type="radio" name="q3" value="11"> 11 <br>
+        <input type="radio" name="q3" value="30"> 30 <br>
+        <input type="radio" name="q3" value="56"> 56
+      </div>
+
+      <div class="question">
+        <p><strong>4. Hindi:</strong> "किताब" का अंग्रेज़ी अर्थ क्या है?</p>
+        <input type="radio" name="q4" value="Pen"> Pen <br>
+        <input type="radio" name="q4" value="Book"> Book <br>
+        <input type="radio" name="q4" value="Paper"> Paper
+      </div>
+
+      <div class="question">
+        <p><strong>5. English:</strong> Choose the correct spelling:</p>
+        <input type="radio" name="q5" value="Enlish"> Enlish <br>
+        <input type="radio" name="q5" value="English"> English <br>
+        <input type="radio" name="q5" value="Englesh"> Englesh
+      </div>
+
+      <div class="question">
+        <p><strong>6. Biology:</strong> The powerhouse of the cell is?</p>
+        <input type="radio" name="q6" value="Mitochondria"> Mitochondria <br>
+        <input type="radio" name="q6" value="Nucleus"> Nucleus <br>
+        <input type="radio" name="q6" value="Ribosome"> Ribosome
+      </div>
+       <div class="question">
+        <p><strong>7. Mathematics:</strong> 5 × 6 = ?</p>
+        <input type="radio" name="q7" value="11"> 11 <br>
+        <input type="radio" name="q7" value="30"> 30 <br>
+        <input type="radio" name="q7" value="56"> 56
+      </div>
+
+      <div class="question">
+        <p><strong>8. Hindi:</strong> "किताब" का अंग्रेज़ी अर्थ क्या है?</p>
+        <input type="radio" name="q8" value="Pen"> Pen <br>
+        <input type="radio" name="q8" value="Book"> Book <br>
+        <input type="radio" name="q8" value="Paper"> Paper
+      </div>
+
+      <div class="question">
+        <p><strong>9. English:</strong> Choose the correct spelling:</p>
+        <input type="radio" name="q9" value="Enlish"> Enlish <br>
+        <input type="radio" name="q9" value="English"> English <br>
+        <input type="radio" name="q9" value="Englesh"> Englesh
+      </div>
+
+      <div class="question">
+        <p><strong>10. Biology:</strong> The powerhouse of the cell is?</p>
+        <input type="radio" name="q10" value="Mitochondria"> Mitochondria <br>
+        <input type="radio" name="q10" value="Nucleus"> Nucleus <br>
+        <input type="radio" name="q10" value="Ribosome"> Ribosome
+      </div>
+
+      <button type="button" onclick="checkResult()">Submit</button>
+      <div id="resultBox" class="result" style="display:none; ">
+       
+      </div>
+       <span style="background-color: transparent;"> 
+            <button type="submit">Send Test</button>
+        <a href="Physics.html">Retake test...!</a>
+        </span>
+  </div>
+    </form>
+
+    <!-- Result -->
+    
+
+  <script>
+    function checkResult() {
+      let score = 0;
+      const answers = {
+        q1: "Time",
+        q2: "Water",
+        q3: "30",
+        q4: "Book",
+        q5: "English",
+        q6: "Mitochondria",
+        q7: "30",
+        q8: "Book",
+        q9: "English",
+        q10: "Mitochondria"
+      };
+
+      // Each question = 100/6 ≈ 16.6 marks (rounded 17 marks)
+      const perQuestion = 10;
+
+      for (let key in answers) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) {
+          score += perQuestion;
+        }
+      }
+
+      // Adjust to maximum 100
+      if (score > 100) score = 100;
+
+      let percentage = score;
+      let status = percentage >= 40 ? "Pass" : "Fail";
+
+      const resultBox = document.getElementById("resultBox");
+      resultBox.style.display = "block";
+      resultBox.className = "result " + (status === "Pass" ? "pass" : "fail");
+      resultBox.innerHTML = `Your Score: ${score}/100 <br> Percentage: ${percentage}% <br> Result: ${status}`;
+    }
+  </script>
+</body>
+</html>

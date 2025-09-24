@@ -1,3 +1,18 @@
+<%--
+    Document   : AdminProfile
+    Created on : 19 Sep, 2025, 1:55:49 AM
+    Author     : Umesh Yadav
+--%>
+
+<%@page import="com.sis.bean.FacultyBean"%>
+<%@page import="com.sis.dao.FacultyRegisterDao"%>
+<%@page import="com.sis.controller.FacultyRegister"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.sis.bean.StudentsBean"%>
+<%@page import="com.sis.dao.StudentsRegisterDAO"%>
+<%@page import="com.sis.bean.AdminBean"%>
+<%@page import="com.sis.dao.Admin"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +23,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     </head>
+    <%
+        int id = Integer.parseInt(request.getParameter("id"));
+        Admin a = new Admin();
+        AdminBean ab = a.GetAdmin(id);
+
+        StudentsRegisterDAO sd = new StudentsRegisterDAO();
+        ArrayList<StudentsBean> all = sd.FindAll();
+
+        FacultyRegister f = new FacultyRegister();
+
+        FacultyRegisterDao fbb = new FacultyRegisterDao();
+        ArrayList<FacultyBean> al = fbb.getAllFaculty();
+
+    %>
     <body style="background-color: antiquewhite">
         <nav>
             <div  class="logo">
@@ -16,16 +45,14 @@
             </div>
             <span class="item">
                 <a  href="index.html">Home</a>
-                <a href="#about-section">About</a>
-                <a href="StudentsLogin.html">Students</a>
-                <a href="facultyLogin.html">Faculty</a>
-                <a href="Admission.html">Admissions</a>
-                <a href="Examination.html">Examinations</a>
-                <a href="AdminLogin.html">Admin Login</a>
-                <a href="StudentsLogin.html">Login</a>
+                <span style="color: red">
+                    <a href="#">Hello</a>
+                    <a href="#"><%=ab.getId()%></a>
+                    <a href="#"><%=ab.getName()%></a>
+                </span>
 
-                <a href="Contact.html">Contact us</a>
-                <a href="Help.html">Help</a>
+                <a href="index.html">Logout</a>
+
             </span>
         </nav>
         <div class="mar">
@@ -55,9 +82,141 @@
 
 
 
-        <div class="main">
+        <div style="height: 700px;" class="main">
+            <div class="main5">
+                <div class="upper">
+                    <p onclick="Profile()" style="background-color: orange;">Your Profile</p>
+                    <p onclick="StudentProfile()" style="background-color: blue;"> Students Data</p>
+                    <p onclick="FacultyProfile()" style="background-color: green;">Faculty Data</p>
+                </div>
+                <div class="maindata">
+                    <img src="images/logo.png" alt="">
+                    <h1>APANA UNIVERSITY BHOPAL (M.P.) 462022  </h1>
+                    <h5>Contact No: 7803869841 /9584392185</h5>
+                    <h5 >Email: yadavumeshkumar815@gmail.com</h5>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>ID</th>
+                            <td>APANA01</td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td>Umesh Yadav</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile No</th>
+                            <td>Umesh Yadav</td>
+                        </tr>
+                        <tr>
+                            <th>DOB</th>
+                            <td>Umesh Yadav</td>
+                        </tr>
 
+                    </table>
+                </div>
+
+
+
+
+                <div class="studentsdata">
+                    <h2>Students Data</h2>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Enrollment No</th>
+                                <th>Name</th>
+                                <th>Course</th>
+                                <th>Branch</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Photo</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                for (StudentsBean data : all) {
+                            %>
+                            <tr>
+                                <td><%= data.getEnrollment()%></td>
+                                <td><%= data.getName()%></td>
+                                <td><%= data.getCourse()%></td>
+                                <td><%= data.getBranch()%></td>
+                                <td><%= data.getEmail()%></td>
+                                <td><%= data.getMobile()%></td>
+                                <td><%= data.getCity()%></td>
+                                <td><%= data.getState()%></td>
+                                <td>
+                                    <img style="height:50px;width:50px;border-radius:50%"
+                                         src="getImage?enroll=<%=data.getEnrollment()%>&type=photo" alt="">
+                                </td>
+                                <td>Update</td>
+                                <td>
+                                    <a href="DataDelete.jsp?enrollment=<%= data.getEnrollment()%>">Delete</a>
+                                </td>
+                            </tr>
+                            <% }%>
+                        </tbody>
+                    </table>
+
+                    <a href="StudentsRegister.html" style="margin-left: 600px; margin-top: 100px; font-weight: bold;">Add new Students ....!</a>
+
+                </div>
+
+
+
+
+                <div class="facultydata">
+                    <h2>Faculty Data</h2>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Name</th>
+                                <th>Course</th>
+                                <th>Faculty ID</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Photo</th>
+                                <th>Update</th>
+                                <th>Delelte</th>
+                        </thead>
+                        <tbody>
+                            <%
+                                for (FacultyBean um : al) {
+                            %>
+                            <tr>
+                                <td><%=um.getEmpId()%></td>
+                                <td><%=um.getName()%></td>
+                                <td><%=um.getSpecialization()%></td>
+                                <td><%=um.getFacultyId()%></td>
+                                <td><%=um.getEmail()%></td>
+                                <td><%=um.getPhone()%></td>
+                                <td><%=um.getCity()%></td>
+                                <td><%=um.getState()%></td>
+                                <td><img style="height: 50px; width: 50px; border-radius: 50%" src="FacultyImage?empId=<%=um.getEmpId()%>&type=photo"alt=""></td>
+                                <td>Update</td>
+                                <td>
+                                    <a href="FDataDelete.jsp?empId=<%= um.getEmpId()%>">Delete</a>
+                                </td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    <a href="facultyRegister.html" style="margin-left: 600px; margin-top: 100px; font-weight: bold;">Add new Faculty Member....!</a>
+                </div>
+
+
+            </div>
         </div>
+
+
+
         <div class="top-box">
             <button class="btn-orange"><i class="fa-solid fa-graduation-cap"></i> Apply for Degree</button>
             <button class="btn-blue"><i class="fa-solid fa-university"></i> NAAC Portal</button>
@@ -225,5 +384,7 @@
         </a>
 
         <script src="script.js"></script>
+        <script src="admin.js"></script>
     </body>
 </html>
+

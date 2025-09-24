@@ -14,14 +14,20 @@ nav
     color: white;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 nav .logo img
 {
     float: left;
-   height: 200px;
-   width: 350px;
-   margin-top: -55px;
-   overflow: hidden;
+    height: 200px;
+    width: 350px;
+    margin-top: -55px;
+    overflow: hidden;
+}
+nav .logo img:hover
+{
+    transform: scaleX(1.1);
+    transition: transform 0.3s ease;
 }
 nav .item
 {
@@ -43,16 +49,1641 @@ nav .item a:hover
 {
     text-decoration: underline;
     color: firebrick;
-   transform: scale(1.2);
+    transform: scale(1.2);
     transition: transform 0.3s ease;
+}
+.mar
+{
+    height: 35px;
+    width: 100%;
+    /* background-color: rgb(139, 182, 231); */
+    position: fixed;
+    top: 80px;
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0ff;
+    font-weight: bold;
+    animation: glow 2s ease-in-out infinite alternate;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff8000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #8000ff,
+        #ff00ff
+        );
+    z-index: 1000;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff8000, 0 0 30px #ffff00;
+        color: #ff3333;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ffff, 0 0 30px #0080ff;
+        color: #00ffcc;
+    }
+    100% {
+        text-shadow: 0 0 10px #8000ff, 0 0 20px #ff00ff, 0 0 30px #ff3399;
+        color: #ff66ff;
+    }
 }
 .main
 {
-    margin-top: 80px;
+    margin-top: 110px;
     width: 100%;
     background-image: url("images/first.jpg");
     background-size:auto ;
     background-position: center;
-    height: 615px;
-    
+    height: 605px;
+
+
+}
+
+.main1
+{
+    margin-top: 110px;
+    width: 100%;
+    background-color: white;
+    height: 700px;
+}
+
+
+
+
+
+
+.top-box {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.top-box button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Colors */
+.btn-orange { background: #f7931e; }
+.btn-blue { background: #0073e6; }
+.btn-darkblue { background: #283747; }
+.btn-red { background: #d32f2f; }
+.btn-dark { background: #34495e; }
+.btn-pink { background: #e91e63; }
+.btn-darkblue2 { background: #004080; }
+
+/* Hover Effects */
+.btn-orange:hover { background: #e67e00; }
+.btn-blue:hover { background: #005bb5; }
+.btn-darkblue:hover { background: #1c2833; }
+.btn-red:hover { background: #b71c1c; }
+.btn-dark:hover { background: #2c3e50; }
+.btn-pink:hover { background: #ad1457; }
+.btn-darkblue2:hover { background: #00264d; }
+
+/* Boxes Layout */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.box {
+    width: 30%;
+    background: #fff;
+    border: 1px solid #ddd;
+    min-height: 200px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.box h3 {
+    margin: 0;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.notice { background: #1a237e; }
+.distinct { background: #c62828; }
+.links { background: #1a237e; }
+
+.content {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    margin-bottom: 8px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.content li:hover {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+.new-tag {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.view-more {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    padding: 8px;
+    background: #f1f1f1;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.view-more:hover {
+    background: #e0e0e0;
+}
+
+
+
+
+
+#about-section {
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+}
+
+/* Left Image */
+.about-left {
+    flex: 1;
+}
+
+.about-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Content */
+.about-right {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.about-right h2 {
+    font-size: 26px;
+    color: #b71c1c;
+    margin-bottom: 20px;
+}
+
+.about-right p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-right p a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.about-right p a:hover {
+    text-decoration: underline;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #b71c1c;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.about-btn:hover {
+    background: #8b0000;
+}
+
+/* Side Enquiry Button */
+.enquiry-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #b71c1c;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-align: center;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.enquiry-btn:hover {
+    background: #8b0000;
+}
+
+
+
+
+
+
+
+footer {
+    background: #111;
+    padding: 40px 60px 20px 60px;
+    position: relative;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer-top h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #ff3d3d;
+}
+.footer-top p {
+    color: #ccc;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-links h3 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 6px 0;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+.last-modified {
+    background: #c00;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+.enquire-btn {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    background: #c00;
+    color: #fff;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+
+
+
+.studentslogin
+{
+    width: 500px;
+    height: 600px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow:  5px 5px 100px rgb(35, 250, 2);
+
+
+}
+.login-form h4
+{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+.login-form input
+{
+    height: 20px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 20px;
+}
+.login-form a
+{
+
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.btn-login
+{
+    height: 40px;
+    width: 150px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+#inquiry-section {
+    padding: 50px;
+    position: fixed;
+    left: 30%;
+    top: 10%;
+    z-index: 1001;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* blue gradient bg */
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#inquiry-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#inquiry-section p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Form */
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.inquiry-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Button */
+.inquiry-form button {
+    background: #ff9800;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.inquiry-form button:hover {
+    background: #e68900;
+}
+.main1 .form-box
+{
+    position: absolute;
+    top: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 1430px;
+    height: 650px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+    padding-left: 1px;
+    font-weight: bold;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+
+}
+.main1 .form-box input,select
+{
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.main1 .form-box label
+{
+    margin-left: 40px;
+}
+.main1 .form-box h2
+{
+
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.main1 .form-box .personal-info
+{
+    width: 450px;
+    height: 280px;
+
+}
+.main1 .form-box .Academic
+{
+    width: 650px;
+    height: 280px;
+    margin-left: 360px;
+    margin-top: -280px;
+
+}
+.main1 .form-box .course
+{
+    width: 400px;
+    height: 120px;
+    margin-left: 1020px;
+    margin-top: -280px;
+
+}
+.main1 .form-box .document
+{
+    width: 400px;
+    height: 120px;
+    margin-left: 1020px;
+    margin-top: 90px;
+}
+
+.main1 .form-box .documentFaculty
+{
+    width: 500px;
+    height: 120px;
+    margin-left: 900px;
+    margin-top: -580px;
+}
+.main1 .form-box .loginDetails
+{
+    width: 450px;
+    height: 120px;
+    margin-left: 450px;
+    position: absolute;
+
+}
+.main1 .form-box .loginDetailsFaculty
+{
+    width: 450px;
+    height: 250px;
+    margin-left: 450px;
+    margin-top: 200px;
+}
+
+.main1 .form-box .professionalDetails
+{
+    width: 450px;
+    height: 120px;
+    margin-left: 450px;
+    margin-top: -120px;
+}
+
+
+.main1 .form-box button
+{
+    height: 40px;
+    width: 250px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 600px;
+    margin-top: 0px;
+}
+
+.susseccMessege
+{
+    width: 900px;
+    height: 450px;
+    border: 2px solid black;
+    margin-top: 40px;
+    margin-left: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+    background-color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: green;
+    display: none;
+}
+.susseccMessege a
+{
+
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+}
+
+
+.mainProfile .left
+{
+    width: 300px;
+    border: 1px solid black;
+    height: 1020px;
+    margin-top: 80px;
+
+
+}
+.mainProfile .left img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 40px;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+}
+.mainProfile .left p
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+
+
+}
+.mainProfile .left .list p
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    margin: 15px 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    box-shadow: 5px 5px 100px rgb(168, 244, 5);
+}
+
+.mainProfile .left .list p:hover
+{
+    background-color: blue;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.mainProfile .mainbox
+{
+    width: 100%;
+    height: 1020px;
+    display: flex;
+
+}
+.mainProfile .mainbox .maindata
+{
+
+    height: 980px;
+    width: 1220px;
+    margin-top: 90px;
+
+}
+
+
+
+.profile-container {
+    width: 80%;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+
+
+}
+.profile-header {
+    background: #003366;
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-weight: bold;
+}
+.tabs button.active {
+    background: #fff;
+    border-bottom: 2px solid #003366;
+    color: #003366;
+}
+.tab-content {
+    padding: 20px;
+}
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.info-table td {
+    padding: 15px 12px;
+    border: 1px solid #ddd;
+}
+
+.info-table td.label {
+    font-weight: bold;
+    background: #f2f2f2;
+    width: 25%;
+}
+.info-table td.value {
+    color: #333;
+}
+.mainProfile .mainbox .maindata a{
+    text-decoration: none;
+    background-color: blue;
+    border-radius: 20px;
+    color: white    ;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 400px;
+    padding: 10px 50px;
+
+
+}
+.mainProfile .mainbox .maindata a:hover
+{
+    background-color: darkblue;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+#academicdetails
+{
+    display: none;
+}
+
+#academicdetails .id-card {
+    width: 350px;
+    height: 600px;
+    margin-left: 300px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 15px;
+    text-align: center;
+}
+
+#academicdetails .header {
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+#academicdetails .header .logo {
+    width: 300px;
+    height: 200px;
+    margin-top: -60px;
+}
+
+#academicdetails .photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin: 10px 0;
+}
+
+#academicdetails .info {
+    text-align: left;
+    margin: 20px;
+    font-size: 16px;
+}
+
+#academicdetails .footer {
+    border-top: 2px solid #000;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+#Attendance
+{
+    display: none;
+    overflow: auto;
+
+    margin-top: 30px;
+    margin-left: 50px;
+}
+#Attendance.info
+{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+
+
+#Examination
+{
+    display: none;
+    overflow: auto;
+
+}
+#Examination .fillform
+{
+    font-size: 20px;
+}
+#Examination .fillform table input
+{
+    border: none;
+    background-color: transparent;
+}
+#Examination .fillform a
+{
+    font-size: 15px;
+    padding: 0px;
+    background-color: transparent;
+    color: #0000ff;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0px;
+}
+#Examination .fillform button
+{
+    height: 50px;
+    width: 250px;
+    background-color: blue;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+#Examination h2 {
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+#Examination  table {
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#Examination  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#Examination  th {
+    background: #f9f9f9;
+}
+#Examination .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+#Examination .scheduled {
+    background-color: #28a745; /* Green */
+}
+#Examination .completed {
+    background-color: #dc3545; /* Red */
+}
+#Examination .apply {
+    background-color: #3700fd; /* Green */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Result
+{
+    display: none;
+}
+#Result .resultform
+{
+
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#Result .finalExam
+{
+    display: none;
+}
+#Result h2 {
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+#Result .finalExam table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#Result .finalExam th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#Result .finalExam th {
+    background: #f9f9f9;
+}
+#Result .finalExam .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+#Result .finalExam .pass {
+    background-color: #28a745; /* Green */
+}
+#Result .finalExam .fail {
+    background-color: #dc3545; /* Red */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Marksheet
+{
+    display: none;
+    margin-top: 100px;
+}
+#Marksheet.marksheet {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#Marksheet .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#Marksheet .header .img
+{
+    height: 100px;
+    width: 110px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: -30px;
+    display: inline-block;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+
+    position: absolute;
+    color: blue;
+    margin-left: -500px;
+}
+#Marksheet .header .img img
+{
+    height: 150px;
+    width: 150px;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+
+#Marksheet .header .img1
+{
+    height: 70px;
+    width: 80px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: -20px;
+    display: inline-block;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+
+    position: absolute;
+    left: 1300px;
+    top: 170px;
+    color: blue;
+
+}
+#Marksheet .header .img1 img
+{
+    height: 100px;
+    width: 100px;
+    margin-top: -28px;
+    margin-left: -10px;
+}
+
+
+
+
+
+
+
+
+#Marksheet .header h1 {
+    margin: 0;
+    margin-top: -40px;
+    font-size: 26px;
+}
+#Marksheet .header p {
+    margin: 5px 0;
+    font-size: 12px;
+    margin-left: 20px;
+}
+#Marksheet .student-info {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#Marksheet .student-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+#Marksheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+#Marksheet th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+#Marksheet th {
+    background: #f9f9f9;
+}
+#Marksheet .status {
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+#Marksheet .pass {
+    background-color: #28a745;
+}
+#Marksheet .fail {
+    background-color: #dc3545;
+}
+#Marksheet  .footer {
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#document
+{
+    display: none;
+
+}
+#document .box
+{
+    display: grid;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+
+
+
+#update
+{
+    display: none;
+}
+#update  .form-box
+{
+    position: absolute;
+    top: 250px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 1430px;
+    height: 650px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+    padding-left: 1px;
+    font-weight: bold;
+    box-shadow: 5px 5px 100px rgb(35, 250, 2);
+
+}
+#update .form-box input,select
+{
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#update .form-box label
+{
+    margin-left: 40px;
+}
+#update .form-box h2
+{
+
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#update .form-box .personal-info
+{
+    width: 450px;
+    height: 280px;
+
+}
+
+#update .form-box .document
+{
+    position: absolute;
+    width: 400px;
+    height: 120px;
+    margin-left: 520px;
+    margin-top: -200px;
+}
+
+
+
+#update .form-box button
+{
+    height: 40px;
+    width: 250px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 400px;
+    margin-top: 350px;
+}
+
+
+
+
+#Password
+{
+    display: none;
+    margin-top: 50px;
+}
+#Password .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 550px;
+    height: 700px;
+}
+
+#Password h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#Password  label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+#Password input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+#Password input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+#Password button {
+    width: 100%;
+    padding: 12px;
+    background: #2980b9;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#Password button:hover {
+    background: #1f6690;
+}
+
+
+
+
+
+
+
+.main1 .wrapper{
+    display:flex;
+    max-width:1400px;
+    margin:auto;
+    gap:30px;
+    overflow: auto;
+    margin-top: 10px;
+    height: 650px;
+    padding-right: 100px;
+    padding-left: 100px;
+    position: absolute;
+
+}
+
+.main1 .left{
+    width: 2000px;
+
+}
+.main1 .wrapper .right
+{
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    height: 600px;
+}
+.main1 .title{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:25px;
+    margin-left: 200px;
+}
+
+.main1 .school{
+    margin-bottom:25px;
+}
+
+.main1 .school h3{
+    font-size:15px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.main1 .row{
+    background:#eee;
+    padding:10px 15px;
+    display:grid;
+    grid-template-columns:1fr 80px 120px;
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.main1 .apply-box{
+    border-bottom:1px solid #ccc;
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+
+.main1 .apply-box h4{
+    margin:0 0 10px;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.main1 .apply-box p{
+    font-size:10px;
+    line-height:1.4;
+    margin:0 0 15px;
+}
+
+.main1 .apply-box button{
+    background:#d33;
+    color:#fff;
+    border:none;
+    padding:8px 18px;
+    font-size:15px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.main1 .apply-box button:hover{
+    background:#b22;
+}
+
+.main1 .list-box h4{
+    margin-top:0;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.main1 .list-box ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.main1 .list-box li{
+    border:1px solid #ccc;
+    padding:8px 10px;
+    font-size:10px;
+    margin-bottom:4px;
+    background:#fff;
+}
+.main1 a
+{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.main1 a:hover
+{
+    background-color: red;
+}
+.main1 #ap
+{
+    position: absolute;
+    top: 780px;
+    left: 500px;
+    width: 300px;
+    text-align: center;
+}
+
+
+.main5
+{
+    margin-top: 110px;
+    width: 100%;
+
+    height: 700px;
+
+    box-sizing: border-box;
+}
+.main5 .upper
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: thistle;
+
+
+}
+.main5 .upper p{
+    height: 20px;
+    width: 510px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.main5 .upper p:hover
+{
+
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.main5 .maindata
+{
+    height: 400px;
+    width: 1000px;
+    margin-top: 50px;
+    background-color: wheat;
+    margin-left: 260px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 100px rgb(35, 250, 2);
+
+
+}
+.main5 .maindata img
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 50px;
+    background-color: blue;
+    margin-top: 20px;
+    box-shadow: 10px 10px 100px rgb(35, 250, 2);
+}
+.main5 .maindata h1
+{
+    margin-left: 300px;
+    margin-top: -135px;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
+.main5 .maindata h5
+{
+    margin-left: 650px;
+    margin-top: -15px;
+
+}
+.main5 .maindata table
+{
+    margin-left: 250px;
+    margin-top: 50px;
+    font-size: 20px;
+    color: darkblue;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.main5 .maindata th,td
+{
+    padding: 15px 100px;
+
+}
+.main5 .maindata td:hover
+{
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.main5 .maindata th:hover
+{
+    background-color: rgb(0, 255, 47);
+    color: white;
+    border-radius: 20px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.main5 .studentsdata h2
+{
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
+.main5 .studentsdata
+{
+    height: 600px;
+    width: 1350px;
+    margin-top: 20px;
+    background-color: wheat;
+    margin-left: 60px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 100px rgb(35, 250, 2);
+    display: none;
+    overflow: auto;
+
+}
+.main5 .studentsdata table
+{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 50px;
+}
+.main5 .studentsdata table th,td
+{
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+
+
+.main5 .facultydata h2
+{
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
+.main5 .facultydata
+{
+    height: 600px;
+    width: 1350px;
+    margin-top: 20px;
+    background-color: wheat;
+    margin-left: 60px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 100px rgb(35, 250, 2);
+    display: none;
+
+    overflow: auto;
+
+}
+.main5 .facultydata table
+{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 50px;
+}
+.main5 .facultydata table th,td
+{
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+#Uma
+{
+    position: absolute;
+    top: 300px;
+    left: 700px;
 }

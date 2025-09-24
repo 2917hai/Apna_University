@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>University_Management_System</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+    </head>
+    <body style="background-color: antiquewhite">
+        <nav>
+            <div  class="logo">
+                <a href="index.html">
+                    <img  src="images/logo.png" alt=""></a>
+            </div>
+            <span class="item">
+                <a  href="index.html">Home</a>
+
+                <a href="StudentsLogin.html">Students</a>
+                <a href="facultyLogin.html">Faculty</a>
+                <a href="Admission.html">Admissions</a>
+                <a href="Examination.html">Examinations</a>
+                <a href="AdminLogin.html">Admin Login</a>
+                <a href="StudentsLogin.html">Login</a>
+
+                <a href="Contact.html">Contact us</a>
+                <a href="Help.html">Help</a>
+            </span>
+        </nav>
+        <div class="mar">
+            <marquee behavior="alternate" direction="left" scrollamount="8">
+                <span class="welcome-text">✨ Welcome to Apana University – Let's Connect Together ✨</span>
+            </marquee>
+        </div>
+
+
+
+        <section id="inquiry-section">
+            <i onclick="closeenq()" style="font-size: 30px;  position: absolute; left: 600px; top: 20px; float: right; cursor: pointer;" class="fa-solid fa-xmark"></i>
+            <h2>Have Any Questions? We're Here to Help!</h2>
+            <p>Fill out the form below, and our team will get back to you shortly.</p>
+            <form class="inquiry-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="tel" placeholder="Your Phone Number" required />
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+
+
+
+
+        <div class="main1">
+            <div style="position: absolute; top: 110px; width: 100%;" class="img">
+                <img style="width: 100%; height: 700px; opacity: 25%; position: relative;" src="images/first.jpg" alt="">
+            </div>
+
+            <div class="form-box" >
+                <center><h1 style="color: darkblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; position: relative; top: -10px;">New Faculty Registration Form</h1></center>
+                <form action="FacultyRegister" method="post" enctype="multipart/form-data">
+                    <div class="personal-info">
+                        <h2>Personal Information:</h2>
+                        <label for="name">Enter Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required> <br>
+                        <label for="father">Enter Father Name:</label>
+                        <input type="text" id="father" name="father" placeholder="Enter Father Name" required><br>
+                        <label for="mother">Enter Mother Name:</label>
+                        <input type="text" id="mother" name="mother" placeholder="Enter Mother Name" required><br>
+                        <label for="dob">Enter Your Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" placeholder="Enter Your DOB" required> <br>
+                        <label for="gender">Choose Your gender:</label>
+                        <input type="radio" id="gender" name="gender" value="Male" >Male
+                        <input type="radio" id="gender" name="gender" value="Female" >Female <br>
+                        <label for="photo">Upload photo</label>
+                        <input type="file" id="photo" name="photo" required> <br>
+                        <label for="sign">Upload Signature</label>
+                        <input type="file" id="sign" name="sign" required>
+                    </div>
+                    <h2>Contact Information:</h2>
+                    <label for="email">Enter Your Email:  </label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required> <br>
+                    <label for="phone">Enter Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required><br>
+                    <label for="aphone">Enter alternate Number:</label>
+                    <input type="tel" id="phone" name="aphone" placeholder="Enter Your Phone Number" ><br>
+                    <label for="address">Permanent Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter Your Address" required> <br>
+                    <label for="caddress">Current Address:</label>
+                    <input type="text" id="caddress" name="caddress" placeholder="Enter Current Address" required> <br>
+                    <label for="city">Enter City:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter Your City" required> <br>
+                    <label for="state">Enter State:</label>
+                    <input type="text" id="state" name="state" placeholder="Enter Your State" required> <br>
+                    <label for="pincode">Enter Pincode:</label>
+                    <input type="text" id="pincode" name="pincode" placeholder="Enter Your Pincode" required> <br>
+
+
+
+
+
+
+                    <div class="documentFaculty">
+                        <h2>document Upload Section</h2>
+                        <label for="idProof">ID Proof (Aadhaar / Passport / Driving License):</label>
+                        <input type="text" id="idProof" name="idProof" placeholder="Enter ID Number (e.g., Aadhaar No.)" required />
+                        <br>
+
+
+                        <!--                        <input type="file" id="idProofFile" name="idProofFile" accept=".pdf,.jpg,.jpeg,.png" />
+                                                <br>
+
+                                                 Mark Sheets
+                                                <label for="marksheets">Mark Sheets (10th, 12th, Graduation etc.):</label>
+                                                <input type="file" id="marksheets" name="marksheets" multiple accept=".pdf,.jpg,.jpeg,.png" />
+                                                <br>
+
+                                                <label for="resume">Resume / CV (PDF or DOC):</label>
+                                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+                                                <br>
+
+                                                 Research Papers
+                                                <label for="researchPapers">Research Papers (if any):</label>
+                                                <input type="file" id="researchPapers" name="researchPapers" accept=".pdf,.doc,.docx" />
+                                                <small>Upload one or more files (optional)</small>
+                                                <br>
+
+                                                 Experience Certificate
+                                                <label for="experienceCert">Experience Certificate:</label>
+                                                <input type="file" id="experienceCert" name="experienceCert" accept=".pdf,.jpg,.jpeg,.png" />
+                                                <small>Upload scanned copy (optional)</small>
+                                                <br>
+                                                <label for="gradCert">Graduation Degree / Certificate:</label>
+                                                <input type="file" id="gradCert" name="gradCert" accept=".pdf,.jpg,.jpeg,.png" required />
+                                                <br>
+
+                                                 Post-Graduation Degree / Certificate
+                                                <label for="pgCert">Post-Graduation Degree / Certificate:</label>
+                                                <input type="file" id="pgCert" name="pgCert" accept=".pdf,.jpg,.jpeg,.png" />
+                                                <br>
+
+                                                 Ph.D / M.Phil
+                                                <label for="phdCert">Ph.D / M.Phil Certificate (if applicable):</label>
+                                                <input type="file" id="phdCert" name="phdCert" accept=".pdf,.jpg,.jpeg,.png" />
+                                                <small>Upload only if applicable</small>
+                                                <br>
+
+                                                 Other Certifications
+                                                <label for="otherCert">Other Certifications:</label>
+                                                <input type="file" id="otherCert" name="otherCert" accept=".pdf,.jpg,.jpeg,.png"  />
+                                                <small>Upload additional courses or training certificates</small>-->
+
+
+                    </div>
+
+
+                    <div class="professionalDetails">
+                        <h2>professional Details</h2>
+                        <label for="facultyId">Faculty ID:</label>
+                        <input type="text" id="facultyId" name="facultyId" placeholder="Enter Faculty ID (if manual)" />
+                        <br>
+
+                        <!-- Department -->
+                        <label for="department">Department:</label>
+                        <select id="department" name="department" required>
+                            <option value="" disabled selected>Select Department</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="maths">Mathematics</option>
+                            <option value="commerce">Commerce</option>
+                            <option value="arts">Arts</option>
+                            <option value="management">Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <br>
+
+                        <!-- Designation -->
+                        <label for="designation">Designation:</label>
+                        <select id="designation" name="designation" required>
+                            <option value="" disabled selected>Select Designation</option>
+                            <option value="lecturer">Lecturer</option>
+                            <option value="asst_prof">Assistant Professor</option>
+                            <option value="assoc_prof">Associate Professor</option>
+                            <option value="professor">Professor</option>
+                            <option value="hod">Head of Department (HOD)</option>
+                        </select>
+                        <br>
+
+                        <!-- Highest Qualification -->
+                        <label for="qualification">Highest Qualification:</label>
+                        <select id="qualification" name="qualification" required>
+                            <option value="" disabled selected>Select Qualification</option>
+                            <option value="msc">M.Sc</option>
+                            <option value="ma">M.A</option>
+                            <option value="mcom">M.Com</option>
+                            <option value="mtech">M.Tech</option>
+                            <option value="mphil">M.Phil</option>
+                            <option value="phd">Ph.D</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <br>
+
+                        <!-- Specialization -->
+                        <label for="specialization">Specialization:</label>
+                        <input type="text" id="specialization" name="specialization" placeholder="Enter subject expertise (e.g., Data Science, Organic Chemistry)" required />
+                        <br>
+
+                        <!-- Years of Experience -->
+                        <label for="experience">Years of Experience:</label>
+                        <input type="number" id="experience" name="experience" placeholder="Enter years of teaching/research experience" min="0" required />
+                        <br>
+
+                        <!-- Previous Institution -->
+                        <label for="prevInstitution">Previous Institution (if any):</label>
+                        <input type="text" id="prevInstitution" name="prevInstitution" placeholder="Enter previous institution name" />
+
+                    </div>
+
+
+                    <div class="loginDetailsFaculty">
+                        <h2>Login Details </h2>
+
+                        <!-- Password -->
+                        <label for="password">Create Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter a strong password" required />
+                        <br>
+                        <label for="password">Re-Password:</label>
+                        <input type="password" id="repassword" name="repassword" placeholder="Re-Enter a strong password" required />
+                        <br>
+
+                        <!-- Security Question -->
+                        <label for="securityQ">Security Question:</label>
+                        <select id="securityQ" name="securityQ" required>
+                            <option value="" disabled selected>Select a security question</option>
+                            <option value="pet">What is your pet’s name?</option>
+                            <option value="school">What was your first school?</option>
+                            <option value="city">In which city were you born?</option>
+                            <option value="nickname">What is your childhood nickname?</option>
+                        </select>
+                        <br>
+
+                        <!-- Security Answer -->
+                        <label for="securityA">Your Answer:</label>
+                        <input type="text" id="securityA" name="securityA" placeholder="Enter your answer" required />
+                        <br>
+
+                    </div>
+                    <button  type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="top-box">
+            <button class="btn-orange"><i class="fa-solid fa-graduation-cap"></i> Apply for Degree</button>
+            <button class="btn-blue"><i class="fa-solid fa-university"></i> NAAC Portal</button>
+            <button class="btn-darkblue"><i class="fa-solid fa-briefcase"></i> Career Portal</button>
+            <button class="btn-red"><i class="fa-solid fa-book"></i> Central Library</button>
+            <br>
+            <button class="btn-dark"><i class="fa-solid fa-user-pen"></i> Process for Name Correction</button>
+            <button class="btn-red"><i class="fa-solid fa-file-circle-exclamation"></i> Process for Duplicate Marksheet</button>
+            <button class="btn-orange"><i class="fa-solid fa-file-signature"></i> Process for Transcript</button>
+            <button class="btn-darkblue2"><i class="fa-solid fa-certificate"></i> Process for Degree</button>
+            <br><br>
+            <button class="btn-pink"><i class="fa-solid fa-magnifying-glass"></i> Surprise Inspection</button>
+        </div>
+
+        <!-- Three Columns -->
+        <div class="container">
+            <!-- Important Notice -->
+            <div class="box">
+                <h3 class="notice"><i class="fa-solid fa-circle-info"></i> IMPORTANT NOTICE</h3>
+                <div class="content">
+                    <ul>
+                        <li><i class="fa-solid fa-file-lines"></i> School of Nanotechnology announces Certificate Courses <span class="new-tag">new</span></li>
+                        <li><i class="fa-solid fa-file-lines"></i> Permitted MOOCS Course List Faculty of B.Tech EX,EC,EE etc. Students July-Dec 2025 <span class="new-tag">new</span></li>
+                        <li><i class="fa-solid fa-file-lines"></i> Regarding Certificate for degree of B.Tech course Session June_2024 <span class="new-tag">new</span></li>
+                        <li><i class="fa-solid fa-file-lines"></i> Instructions to download degree certificate from Digi Locker NAD <span class="new-tag">new</span></li>
+                    </ul>
+                </div>
+                <div class="view-more"><i class="fa-solid fa-chevron-down"></i> View More</div>
+            </div>
+
+            <!-- University Distinctiveness -->
+            <div class="box">
+                <h3 class="distinct"><i class="fa-solid fa-building-columns"></i> UNIVERSITY DISTINCTIVENESS</h3>
+                <div class="content">
+                    <p><b>Coming Soon !!</b></p>
+                </div>
+            </div>
+
+            <!-- Important Links -->
+            <div class="box">
+                <h3 class="links"><i class="fa-solid fa-link"></i> IMPORTANT LINKS</h3>
+                <div class="content">
+                    <ul>
+                        <li><i class="fa-solid fa-file"></i> I.C.C. COMMITTEE</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA ENGG(2025)</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA OVERALL(2025)</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA ENGG(2024)</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA OVERALL(2024)</li>
+                        <li style="color:red;font-weight:bold;"><i class="fa-solid fa-flask"></i> Research Portal</li>
+                        <li><i class="fa-solid fa-network-wired"></i> APANA-CISCO ACADEMY</li>
+                        <li><i class="fa-solid fa-user-tie"></i> Employer Login</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA ENGG(2022)</li>
+                        <li><i class="fa-solid fa-file"></i> NIRF- APANA OVERALL(2022)</li>
+                        <li><i class="fa-solid fa-file"></i> SSR(NAAC)-2017</li>
+                        <li><i class="fa-solid fa-file"></i> TEQIP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="footer-top">
+                <h2>360<sup>o</sup> View</h2>
+                <p>Visit Campus Virtual Tour</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h3>Apana Concerns</h3>
+                    <ul>
+                        <li><a href="#">The APANA Group</a></li>
+                        <li><a href="#">Apana Realty</a></li>
+                        <li><a href="#">ApolloSage Hospitals</a></li>
+                        <li><a href="#">APANA Group of Institutions (SGI)</a></li>
+                        <li><a href="#">APANA International School</a></li>
+                        <li><a href="#">True Apana Foundation</a></li>
+                        <li><a href="#">Agrawal Power Pvt. Ltd.</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Admissions</h3>
+                    <ul>
+                        <li><a href="#">Mandatory Disclosure</a></li>
+                        <li><a href="#">Anti-Ragging Affidavit</a></li>
+                        <li><a href="#">Fee Structure</a></li>
+                        <li><a href="#">Scholarship</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Value Added Course</a></li>
+                        <li><a href="#">UGC Performa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Virtual Tour</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">APANA Talk</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Directory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Campuses</h3>
+                    <ul>
+                        <li><a href="#">APANA University - Bhopal</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                    </ul>
+                    <div class="last-modified">last modified: August 28 2025 12:42:23</div>
+                    <div class="map-box">
+                        <iframe
+                            src="https://share.google/zCNXbEAH6PBARmtYh"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                Copyright © 2025 <a href="#">APANA University Bhopal</a>, The APANA Group Development Team
+            </div>
+        </footer>
+
+        <!-- Floating Enquire Button -->
+        <div onclick="check()" class="enquire-btn">Enquire Now 2025-26</div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/917803869841" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+
+
+        <script src="sript.js"></script>
+    </body>
+</html>
